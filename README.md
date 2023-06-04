@@ -3,11 +3,11 @@ cd PoseNetOSC
   ```
 
 ```sh
-npm i osc-js\
+npm i osc-js
   ```
 
 ```sh
-node ./app.js\
+node ./app.js
   ```
 
 - in another terminal window type 
