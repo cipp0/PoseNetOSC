@@ -1,4 +1,8 @@
 ```sh
+cd PoseNetOSC
+  ```
+
+```sh
 npm i osc-js\
   ```
 
@@ -8,7 +12,7 @@ node ./app.js\
 
 - in another terminal window type 
 ```sh
-cd PoseOsc && python3 -m http.server
+cd PoseNetOsc && python3 -m http.server
 ```
 
 - Go to localhost:8000
