@@ -96,93 +96,74 @@ function gotPoses(poses){
 
     pose = poses[0].pose;
     skeleton = poses[0].skeleton;
-    //console.log(poses[0].pose.leftEar.x);
-    
-    var leftAnkleX = new OSC.Message('/leftAnkleX', poses[0].pose.leftAnkle.x);
-      osc.send(leftAnkleX);
-    var leftAnkleY = new OSC.Message('/leftAnkleY', poses[0].pose.leftAnkle.y);
-      osc.send(leftAnkleY);
 
-    var leftEarX = new OSC.Message('/leftEarX', poses[0].pose.leftEar.x);
-      osc.send(leftEarX);
-    var leftEarY = new OSC.Message('/leftEarY', poses[0].pose.leftEar.y);
-      osc.send(leftEarY);
+    var leftAnkle = poses[0].pose.leftAnkle;
+    var msgLAnkle = new OSC.Message('/leftAnkle', leftAnkle.x, leftAnkle.y);
+      osc.send(msgLAnkle);
 
-    var leftElbowX = new OSC.Message('/leftElbowX', poses[0].pose.leftElbow.x);
-      osc.send(leftElbowX);
-    var leftElbowY = new OSC.Message('/leftElbowY', poses[0].pose.leftElbow.y);
-      osc.send(leftElbowY);
+    var rightAnkle = poses[0].pose.rightAnkle;
+    var msgRAnkle = new OSC.Message('/rightAnkle', rightAnkle.x, rightAnkle.y);
+      osc.send(msgRAnkle);
 
-    var leftEyeX = new OSC.Message('/leftEyeX', poses[0].pose.leftEye.x);
-      osc.send(leftEyeX);
-    var leftEyeY = new OSC.Message('/leftEyeY', poses[0].pose.leftEye.y);
-      osc.send(leftEyeY);
+    var leftEar = poses[0].pose.leftEar;
+    var msgLEar = new OSC.Message('/leftEar', leftEar.x, leftEar.y);
+      osc.send(msgLEar);
 
-    var leftHipX = new OSC.Message('/leftHipX', poses[0].pose.leftHip.x);
-      osc.send(leftHipX);
-    var leftHipY = new OSC.Message('/leftHipY', poses[0].pose.leftHip.y);
-      osc.send(leftHipY);
+    var rightEar = poses[0].pose.rightEar;
+    var msgREar = new OSC.Message('/rightEar', rightEar.x, rightEar.y);
+      osc.send(msgREar);
 
-    var leftKneeX = new OSC.Message('/leftKneeX', poses[0].pose.leftKnee.x);
-      osc.send(leftKneeX);
-    var leftKneeY = new OSC.Message('/leftKneeY', poses[0].pose.leftKnee.y);
-      osc.send(leftKneeY);
+    var leftElbow = poses[0].pose.leftElbow;
+    var msgLElbow = new OSC.Message('/leftElbow', leftElbow.x, leftElbow.y);
+      osc.send(msgLElbow);
 
-    var leftShoulderX = new OSC.Message('/leftShoulderX', poses[0].pose.leftShoulder.x);
-      osc.send(leftShoulderX);
-    var leftShoulderY = new OSC.Message('/leftShoulderY', poses[0].pose.leftShoulder.y);
-      osc.send(leftShoulderY);
+    var rightElbow = poses[0].pose.rightElbow;
+    var msgRElbow = new OSC.Message('/rightElbow', rightElbow.x, rightElbow.y);
+      osc.send(msgRElbow);
 
-    var leftWristX = new OSC.Message('/leftWristX', poses[0].pose.leftWrist.x);
-      osc.send(leftWristX);
-    var leftWristY = new OSC.Message('/leftWristY', poses[0].pose.leftWrist.y);
-      osc.send(leftWristY);
+    var leftEye = poses[0].pose.leftEye;
+    var msgLEye = new OSC.Message('/leftEye', leftEye.x, leftEye.y);
+      osc.send(msgLEye);
 
-    var NoseX = new OSC.Message('/NoseX', poses[0].pose.nose.x);
-      osc.send(NoseX);
-    var NoseY = new OSC.Message('/NoseY', poses[0].pose.nose.y);
-      osc.send(NoseY);
+    var rightEye = poses[0].pose.rightEye;
+    var msgREye = new OSC.Message('/rightEye', rightEye.x, rightEye.y);
+      osc.send(msgREye);
 
-    var rightAnkleX = new OSC.Message('/rightAnkleX', poses[0].pose.rightAnkle.x);
-      osc.send(rightAnkleX);
-    var rightAnkleY = new OSC.Message('/rightAnkleY', poses[0].pose.rightAnkle.y);
-      osc.send(rightAnkleY);
+    var leftHip = poses[0].pose.leftHip;
+    var msgLHip = new OSC.Message('/leftHip', leftHip.x, leftHip.y);
+      osc.send(msgLHip);
 
-    var rightEarX = new OSC.Message('/rightEarX', poses[0].pose.rightEar.x);
-      osc.send(rightEarX);
-    var rightEarY = new OSC.Message('/rightEarY', poses[0].pose.rightEar.y);
-      osc.send(rightEarY);
+    var rightHip = poses[0].pose.rightHip;
+    var msgRHip = new OSC.Message('/rightHip', rightHip.x, rightHip.y);
+      osc.send(msgRHip);
 
-    var rightElbowX = new OSC.Message('/rightElbowX', poses[0].pose.rightElbow.x);
-      osc.send(rightElbowX);
-    var rightElbowY = new OSC.Message('/rightElbowY', poses[0].pose.rightElbow.y);
-      osc.send(rightElbowY);
+    var leftKnee = poses[0].pose.leftKnee;
+    var msgLKnee = new OSC.Message('/leftKnee', leftKnee.x, leftKnee.y);
+      osc.send(msgLKnee);
 
-    var rightEyeX = new OSC.Message('/rightEyeX', poses[0].pose.rightEye.x);
-      osc.send(rightEyeX);
-    var rightEyeY = new OSC.Message('/rightEyeY', poses[0].pose.rightEye.y);
-      osc.send(rightEyeY);
+    var rightKnee = poses[0].pose.rightKnee;
+    var msgRKnee = new OSC.Message('/rightKnee', rightKnee.x, rightKnee.y);
+      osc.send(msgRKnee);
 
-    var rightHipX = new OSC.Message('/rightHipX', poses[0].pose.rightHip.x);
-      osc.send(rightHipX);
-    var rightHipY = new OSC.Message('/rightHipY', poses[0].pose.rightHip.y);
-      osc.send(rightHipY);
+    var leftShoulder = poses[0].pose.leftShoulder;
+    var msgLShoulder = new OSC.Message('/leftShoulder', leftShoulder.x, leftShoulder.y);
+      osc.send(msgLShoulder);
 
-    var rightKneeX = new OSC.Message('/rightKneeX', poses[0].pose.rightKnee.x);
-      osc.send(rightKneeX);
-    var rightKneeY = new OSC.Message('/rightKneeY', poses[0].pose.rightKnee.y);
-      osc.send(rightKneeY);
+    var rightShoulder = poses[0].pose.rightShoulder;
+    var msgRShoulder = new OSC.Message('/rightShoulder', rightShoulder.x, rightShoulder.y);
+      osc.send(msgRShoulder);
 
-    var rightShoulderX = new OSC.Message('/rightShoulderX', poses[0].pose.rightShoulder.x);
-      osc.send(rightShoulderX);
-    var rightShoulderY = new OSC.Message('/rightShoulderY', poses[0].pose.rightShoulder.y);
-      osc.send(rightShoulderY);
+    var leftWrist = poses[0].pose.leftWrist;
+    var msgLWrist = new OSC.Message('/leftWrist', leftWrist.x, leftWrist.y);
+      osc.send(msgLWrist);
 
-    var rightWristX = new OSC.Message('/rightWristX', poses[0].pose.rightWrist.x);
-      osc.send(rightWristX);
-    var rightWristY = new OSC.Message('/rightWristY', poses[0].pose.rightWrist.y);
-      osc.send(rightWristY);
-    
+    var rightWrist = poses[0].pose.rightWrist;
+    var msgRWrist = new OSC.Message('/rightWrist', rightWrist.x, rightWrist.y);
+      osc.send(msgRWrist);
+
+    var nose = poses[0].pose.nose;
+    var msgNose = new OSC.Message('/nose', nose.x, nose.y);
+      osc.send(msgNose);
   }
 }
 
