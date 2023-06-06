@@ -2,7 +2,7 @@
 
 # 🏃‍♀️PoseNetOSC
 
-![plot](/img.png)
+![plot](img/img.png)
 
 - open Main.maxpat
 
