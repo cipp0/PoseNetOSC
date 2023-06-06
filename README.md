@@ -1,6 +1,6 @@
 
 
-# 🏃‍♀️PoseNetOSC
+# 🏃‍♀️PoseNetOSC 📡
 
 ![plot](img/img.png)
 
